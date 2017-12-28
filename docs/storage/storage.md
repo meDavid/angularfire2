@@ -49,8 +49,8 @@ There are two options for uploading files.
 
 | method   |                    | 
 | ---------|--------------------| 
-| `put(data: Blob, metadata?: storage.UploadMetadata | undefined): AngularFireUploadTask` | Starts the upload of the blob to the storage reference's path. Returns an `AngularFireUploadTask` for upload monitoring. | 
-| `putString(keyRefOrSnap: string, value: T)` | Firebase | AFUnwrappedSnapshot, value: Object) | Updates an existing item in the array. Accepts a key, database reference, or an unwrapped snapshot. |
+| `put(data: Blob, metadata?: storage.UploadMetadata \| undefined): AngularFireUploadTask` | Starts the upload of the blob to the storage reference's path. Returns an `AngularFireUploadTask` for upload monitoring. | 
+| `putString(data: string, format?: string \| undefined, metadata?: UploadMetadata \| undefined): AngularFireUploadTask` | Starts the upload of the string to the storage referece's path in the given format. |
 
 ```ts
 import { Component } from '@angular/core';
@@ -78,9 +78,9 @@ An `AngularFireUploadTask` has methods for observing upload percentage as well a
 
 | method   |                    | 
 | ---------|--------------------| 
-| `snapshotChanges(): Observable<FirebaseStorage.UploadTaskSnapshot | undefined>` | Emits the raw `UploadTaskSnapshot` as the file upload progresses. | 
-| `percentageChanges(): Observable<number | undefined>` | Emits the upload completion percentage. | 
-| `downloadURL(): Observable<string | null>` | Emits the download url when available |
+| `snapshotChanges(): Observable<FirebaseStorage.UploadTaskSnapshot \| undefined>` | Emits the raw `UploadTaskSnapshot` as the file upload progresses. | 
+| `percentageChanges(): Observable<number \| undefined>` | Emits the upload completion percentage. | 
+| `downloadURL(): Observable<string \| null>` | Emits the download url when available |
 
 #### Example Usage
 
